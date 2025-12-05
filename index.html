@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Paper Collection</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Research Paper Collection</h1>
+            <div class="stats">
+                <span class="stat-item">Total Papers: <span id="total-papers">0</span></span>
+                <span class="stat-item">Collections: <span id="total-collections">0</span></span>
+            </div>
+        </header>
+
+        <div class="filters">
+            <input type="text" id="search-input" placeholder="Search papers by title or authors...">
+            <select id="collection-filter">
+                <option value="">All Collections</option>
+            </select>
+            <select id="year-filter">
+                <option value="">All Years</option>
+            </select>
+        </div>
+
+        <div id="active-filters" class="active-filters" style="display: none;"></div>
+
+        <div class="table-container">
+            <table id="papers-table">
+                <thead>
+                    <tr>
+                        <th class="col-name">
+                            <span class="col-icon">📄</span>
+                            <span>Name</span>
+                            <div class="resizer"></div>
+                        </th>
+                        <th class="col-topic">
+                            <span class="col-icon">🏛️</span>
+                            <span>Venue</span>
+                            <div class="resizer"></div>
+                        </th>
+                        <th class="col-tag">
+                            <span class="col-icon">🏷️</span>
+                            <span>Tag</span>
+                            <div class="resizer"></div>
+                        </th>
+                        <th class="col-year">
+                            <span class="col-icon">📅</span>
+                            <span>Date</span>
+                            <div class="resizer"></div>
+                        </th>
+                        <th class="col-link">
+                            <span class="col-icon">🔗</span>
+                            <span>Link</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="papers-tbody">
+                    <!-- Papers will be loaded here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="loading" class="loading">Loading papers...</div>
+        <div id="no-results" class="no-results" style="display: none;">No papers found matching your criteria.</div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
+</html>
