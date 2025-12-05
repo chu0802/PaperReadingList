@@ -2,6 +2,14 @@
 
 A web application for filtering and browsing academic papers. This project provides a clean interface to view, organize, and discover research papers with personalized recommendations.
 
+## Screenshots
+
+### Desktop View
+![Desktop Screenshot](assets/images/desktop-screenshot.png)
+
+### Mobile View
+![Mobile Screenshot](assets/images/mobile-screenshot.png)
+
 ## Features
 
 - 📚 Browse collected academic papers
