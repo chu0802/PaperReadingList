@@ -225,11 +225,11 @@ function escapeHtml(text) {
 }
 
 // Update statistics
-function updateStats() {
-    document.getElementById('total-papers').textContent = allPapers.length;
+function updateStats(papers = allPapers) {
+    document.getElementById('total-papers').textContent = papers.length;
     
     const uniqueCollections = new Set();
-    allPapers.forEach(paper => {
+    papers.forEach(paper => {
         if (paper.collections) {
             paper.collections.forEach(collection => uniqueCollections.add(collection.name));
         }
@@ -300,6 +300,9 @@ function filterPapers() {
     
     // Apply current sort if exists
     applySortToFiltered();
+    
+    // Update stats with filtered papers
+    updateStats(filteredPapers);
 }
 
 // Apply current sort state to filtered papers
@@ -469,6 +472,9 @@ function filterByVenue(venueName) {
     
     // Apply current sort if exists
     applySortToFiltered();
+    
+    // Update stats with filtered papers
+    updateStats(filteredPapers);
 }
 
 // Update active filters display
